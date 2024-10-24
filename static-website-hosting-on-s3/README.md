@@ -2,7 +2,8 @@
 
 1. Logged in to AWS management console as root user
 2. Created a S3 (Simple Storage Service) bucket by enabling ACL (Access Control List) for making the objects publicly visible
-   <img src = "C:\Users\ragav\OneDrive\Pictures\a.png">
+   ![a](https://github.com/user-attachments/assets/4cf2c2e3-adb4-4142-824d-e8b67deb9939)
+
 4. Uploaded the HTML and CSS files as objects into the bucket
 5. Configured the static website hosting on the bucket by enabling it
 6. Error occurred because, only the bucket is made public and not objects. So, objects are made publicly accessible too

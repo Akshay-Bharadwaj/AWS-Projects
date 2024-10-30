@@ -47,6 +47,9 @@ Steps:
 
 - In one route table, two routes are available. One with 0.0.0.0/0 as destination and default IG as the target. This means, it will route the traffic to that IG from anywhere. In second one, 172.31.0.0/16 (IP address of default VPC) as destination and target is local. This means, the traffic is routed within the resources inside VPC having the entire address space 172.31.0.0/16
 - In another route table, only one route is mentioned with the IP address of the VPC created (10.0.0.0/16). This means the traffic flows within the VPC and not outside. Now to this, add another route with 0.0.0.0/0 as destination and IG created as target. So that it routes the traffic from anywhere to that IG
+
+![image](https://github.com/user-attachments/assets/45b53ba3-5f34-4a64-9d97-ec8d60e588c5)
+
 - Also, when the IP addresses overlap, AWS gives priority to the restrictive one first (here, the VPC we created and its resources) and then the traffic from anywhere
 - Associate the subnet created with the route tables created. If not created, it will associate with the main route table
 

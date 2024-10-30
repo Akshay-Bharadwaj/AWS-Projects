@@ -52,3 +52,21 @@ Steps:
 
 - Also, when the IP addresses overlap, AWS gives priority to the restrictive one first (here, the VPC we created and its resources) and then the traffic from anywhere
 - Associate the subnet created with the route tables created. If not created, it will associate with the main route table
+
+6. EC2 instance is created and deployed in the subnet
+
+7. Security group is enabled over the instance
+- Security group is like a firewall for every resource inside the subnet/VPC. They have strict rules on what kind of traffic comes in or goes out of the resources based on their IP address, port and protocol
+- Both inbound and outbound rules can be enabled. Inbound rules for the traffic coming into resource. The protocol can be anything like HTTP, HTTPS, SSH, FTP, SMTP etc. with port numbers like 80, 443, 22, 21, 25 etc. Same applicable for the outbound rules which is for the traffic going outside from the resources.
+
+![image](https://github.com/user-attachments/assets/aed3baa1-ce31-481c-90c7-600d28506e27)
+
+8. Added NACL (Network Access Control List)
+- NACL is an additional layer of security at the subnet level. It monitors the traffic coming in and out of the subnet. It checks against the ACL table before allowing them inside subnet
+- It is like a combination of route table and security group
+- AWS creates a default NACL and it allows all traffic until it is customised
+- The rules in both inbound and outbound rules of the NACL works on priority. If the rule 100 is failing, then * works and allows traffic. Else it won't. Similarly if there are two rules like rule 100, 200 and * in order, where 100 allows https traffic, 200 allows http traffic and * allows all traffic, then, if 100 fails, 200 works. If 200 fails, then * works
+
+![image](https://github.com/user-attachments/assets/a31da872-b82d-4bf0-867f-2b60f73e54ea)
+
+

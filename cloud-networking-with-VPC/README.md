@@ -37,7 +37,7 @@ Steps:
 
 ![image](https://github.com/user-attachments/assets/1dc0bb42-b02e-44a9-b97b-502286a404cb)
 
-5. Enable route tables
+5. Enabled route tables
 - Creating an internet gateway and attaching it to VPC does not make resources connect to internet outside or receive traffic from it
 - Route tables (like a collection of IP addresses and its ranges) only will direct the traffic from resources to internet and vice versa
 - A subnet can have only one route table and multiple subnets can have same route table
@@ -52,9 +52,3 @@ Steps:
 
 - Also, when the IP addresses overlap, AWS gives priority to the restrictive one first (here, the VPC we created and its resources) and then the traffic from anywhere
 - Associate the subnet created with the route tables created. If not created, it will associate with the main route table
-
-
-
-
-
-

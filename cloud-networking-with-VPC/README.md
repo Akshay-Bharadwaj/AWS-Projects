@@ -69,4 +69,6 @@ Steps:
 
 ![image](https://github.com/user-attachments/assets/a31da872-b82d-4bf0-867f-2b60f73e54ea)
 
-
+9. Created a private subnet, private route table and private NACL
+- This helps in securing the resources from the outside traffic. They will be isolated from internet gateway
+- If they want to communicate to the internet, then NAT (Network Address Translation) gateway is created and associated with them

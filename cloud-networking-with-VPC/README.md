@@ -72,3 +72,6 @@ Steps:
 9. Created a private subnet, private route table and private NACL
 - This helps in securing the resources from the outside traffic. They will be isolated from internet gateway
 - If they want to communicate to the internet, then NAT (Network Address Translation) gateway is created and associated with them
+
+10. Launching resources inside subnets in a VPC
+- Deploying both private and public instances inside private and public subnets in the VPC

@@ -6,7 +6,8 @@ Objectives:
 1. Deploying instances in subnets within a VPC
 2. Exposing the instances from the subnet to the internet using internet gateway
 
-![image](https://github.com/user-attachments/assets/75c4f605-b1a3-4461-b0e7-5ed708b25156)
+![image](https://github.com/user-attachments/assets/b371f742-aed1-49e7-aff6-16d6f801c053)
+
 
 Steps:
 1. Build a VPC

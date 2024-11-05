@@ -74,5 +74,33 @@ Steps:
 - This helps in securing the resources from the outside traffic. They will be isolated from internet gateway
 - If they want to communicate to the internet, then NAT (Network Address Translation) gateway is created and associated with them
 
+![image](https://github.com/user-attachments/assets/4ecbac15-8bb9-424b-9127-0ac1313d67c0)
+
+![image](https://github.com/user-attachments/assets/317a6577-2622-4cb9-9de5-f821285ed0f9)
+
+![image](https://github.com/user-attachments/assets/ba768e07-3612-4ea3-85c3-672d66dd0535)
+
 10. Launching resources inside subnets in a VPC
 - Deploying both private and public instances inside private and public subnets in the VPC
+- Note: Adding public security group created for the public instance as the source for the inbound SG in private instance enables the secured communication between two instances
+
+![image](https://github.com/user-attachments/assets/ea56deaf-e066-4113-b210-c68a331a850c)
+
+![image](https://github.com/user-attachments/assets/80c84df7-ba2a-4986-969c-84b506ea76f1)
+
+11. Made SSH connectivity with the public instance using EC2 instance connect. Also checked the connectivity between private and public instances
+- Ping messages are mostly blocked by the private instances using ICMP (Internet Control Message Protocol) to prevent network attacks
+
+![image](https://github.com/user-attachments/assets/640f48ba-982f-4d99-ba5f-982e767ed617)
+
+- The inbound and outbound rule of the NACL and security group of the private instance is changed in a way to allow those messages
+
+![image](https://github.com/user-attachments/assets/44b8986d-9141-4e66-a3fd-eef3bc99175e)
+
+![image](https://github.com/user-attachments/assets/bfce593f-86f2-4092-9ec0-b4518bc6b30d)
+
+![image](https://github.com/user-attachments/assets/2f2447d9-c9f1-4488-b407-1f5c3f1de7dd)
+
+- Curl message is used to test the connectivity between public instance and public internet
+
+![image](https://github.com/user-attachments/assets/4192ebe9-4a40-41f9-8798-a27d627b6da9)

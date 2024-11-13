@@ -1,1 +1,1 @@
-# My journey with cloud using AWS 😊
+# Documenting my journey on AWS and Devops 😊

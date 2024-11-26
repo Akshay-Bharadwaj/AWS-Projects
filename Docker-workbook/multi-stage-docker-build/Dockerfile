@@ -1,6 +1,4 @@
-###########################################
-# BASE IMAGE
-###########################################
+#base image for the build dependencies
 
 FROM ubuntu AS build
 
@@ -13,14 +11,12 @@ COPY . .
 RUN CGO_ENABLED=0 go build -o /app .
 
 ############################################
-# HERE STARTS THE MAGIC OF MULTI STAGE BUILD
-############################################
+
+#runtime time dependencies
 
 FROM scratch
 
-# Copy the compiled binary from the build stage
 COPY --from=build /app /app
 
-# Set the entrypoint for the container to run the binary
 ENTRYPOINT ["/app"]
 

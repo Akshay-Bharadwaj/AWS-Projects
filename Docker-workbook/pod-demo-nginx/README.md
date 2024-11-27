@@ -7,10 +7,10 @@
 
 Commands used are:
 
-minikube start
-kubectl create -f pod.yml
-kubectl get pods -o wide
-kubectl describe pods <podname>
+- minikube start
+- kubectl create -f pod.yml
+- kubectl get pods -o wide
+- kubectl describe pods <podname>
 
 ![image](https://github.com/user-attachments/assets/de338dc0-ee77-4658-9d24-f2bcd34dc0d1)
 

@@ -1,41 +1,20 @@
+# Create a simple pod using Kubernetes
 
-# Containeraizing a docker image
+1. The main dependencies in kubernetes are kubectl and minikube. Kubectl is the command line interface to interact with the kubernetes. Minikube is a tool to setup a lightweight kubernetes cluster to deploy and test applications.
+2. The minimal level of deployment in kubernetes is pod. It is a single container or a group of containers.
+3. K8s as orchestrator creates the pod using the specifications given in pod.yaml file and containarize it within the cluster.
 
-1. A Dockerfile is written, which is a document of all commands a user could call to build an image
-2. A docker image has been built and it is pushed to the docker hub
 
-docker build -t <repositoryName:tagName> .
-docker run -it -p <hostPort>:<containerPort> <repositoryName:tagName>
-docker login
-docker push <repositoryName:tagName>
+Commands used are:
 
-- The built docker image which is mapped on to a host port can be accessed at localhost:<port>
+minikube start
+kubectl create -f pod.yml
+kubectl get pods -o wide
+kubectl describe pods <podname>
 
-![image](https://github.com/user-attachments/assets/2d1c845b-12d7-4e63-a62c-cc2cb9472143)
+![image](https://github.com/user-attachments/assets/de338dc0-ee77-4658-9d24-f2bcd34dc0d1)
 
-![image](https://github.com/user-attachments/assets/1ff1207d-2cf5-4d9c-9485-b57368e83b4c)
-
-2. An public EC2 instance is created with a key pair
-
-![image](https://github.com/user-attachments/assets/8297b5d6-7fce-4429-9162-7f9933b045de)
-
-3. SSH connection is made from host to the instance to interact with it
-
-![image](https://github.com/user-attachments/assets/2999ab68-83de-43e2-8d7e-83e9462549dc)
-
-4. Required dependencies are installed in the instance
-5. The docker image is pulled from the docker hub
-
-![image](https://github.com/user-attachments/assets/f779421d-cdbc-443b-a855-ebebba3484fb)
-
-docker pull <repositoryName:tagName>
-
-6. Pulled image is ran and mapped to the port to start the application and access it
-
-docker run -it -p <hostPort>:<containerPort> <repositoryName:tagName>
-
-![image](https://github.com/user-attachments/assets/69a85e8a-5d51-4811-b344-1c47c04bb852)
-
+![image](https://github.com/user-attachments/assets/9d2a7ae0-acf0-4611-8ebc-f7e8ae3a419b)
 
 
 

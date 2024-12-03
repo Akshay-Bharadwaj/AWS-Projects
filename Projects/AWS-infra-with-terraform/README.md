@@ -9,7 +9,7 @@ Overview:
 1. Created IAM user and access keys
 2. Configured AWS in terminal and installed terraform
 3. Created providers.tf file to declare the cloud providers required for managing infrastructure
-4. Initialized directory for working with terraform
+4. Initialized directory for working with terraform by running terraform init
 5. Created main.tf which holds the infrastucture configuration with module imports and variables
 6. Created variables.tf file to configure the variables used inside main.tf file. This reduces the hard-coded values which are mentioned multiple times
 7. In main.tf, created,
@@ -27,6 +27,9 @@ Overview:
    - Output field to display the DNS created for the load balancer. Through this DNS namme, 
      the application (userdata.sh) can be accessed
    - For every hit on the browser, the load balancer routes the traffic to different servers
+8. Checked the configuration and debugged the errors
+9. Planned the required resources to be created for the given configuration
+10. Created the resources and checked in console
 
 
 ![image](https://github.com/user-attachments/assets/3ae766ee-b4f1-4256-b514-ce3ba162a629)
@@ -49,51 +52,12 @@ Overview:
 
 ![image](https://github.com/user-attachments/assets/7b39404e-5199-4c2e-9c09-510585fcb23f)
 
+![image](https://github.com/user-attachments/assets/c6eb5a13-0fea-4a22-af22-eaf00b18e938)
 
+![image](https://github.com/user-attachments/assets/e600cdaa-002b-4edf-baea-7032923925d2)
 
+![image](https://github.com/user-attachments/assets/773bd212-530b-4442-a54e-2bf40550aa41)
 
+![image](https://github.com/user-attachments/assets/df8fc413-32e0-4457-b71e-a2772d8d6b09)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/848b7648-dbab-4a32-a607-c23f879e7912)
